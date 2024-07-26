@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 400;
+  src: url("./fonts/zillaslab-regular-webfont.woff2") format("woff2"),
+    url("./fonts/zillaslab-regular-webfont.woff") format("woff"),
+    url("./fonts/ZillaSlab-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 600;
+  src: url("./fonts/zillaslab-semibold-webfont.woff2") format("woff2"),
+    url("./fonts/zillaslab-semibold-webfont.woff") format("woff"),
+    url("./fonts/ZillaSlab-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Zilla Slab";
+  font-weight: 400;
+  src: url("./fonts/zillaslab-bold-webfont.woff2") format("woff2"),
+    url("./fonts/zillaslab-bold-webfont.woff") format("woff"),
+    url("./fonts/ZillaSlab-Bold.ttf") format("truetype");
+}
+
 *,
 *::before,
 *::after {
@@ -24,7 +48,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Zilla Slab", Cambria, Cochin, Georgia, Times, "Times New Roman",
+    serif;
 }
 
 .container {
