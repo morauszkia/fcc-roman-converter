@@ -1,5 +1,6 @@
 const numberInputEl = document.getElementById("number");
 const btnEl = document.getElementById("convert-btn");
+const resultContainerEl = document.getElementById("result-container");
 const resultAreaEl = document.getElementById("output");
 
 const DIVISORS = [1000, 100, 10, 1];
@@ -48,6 +49,20 @@ const convert = (arabic) => {
 
 const handleInput = (e) => {
   e.preventDefault();
+
+  const arabicNumber = numberInputEl.value;
+
+  let result;
+
+  if (arabicNumber < 0 || arabicNumber > 3999) {
+    result = "Please enter a valid number between 0 and 3999";
+  } else {
+    result = convert(arabicNumber);
+  }
+
+  resultAreaEl.textContent = result;
+  numberInputEl.value = "";
+  resultContainerEl.classList.remove("hidden");
 };
 
 btnEl.addEventListener("click", handleInput);
