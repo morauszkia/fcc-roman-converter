@@ -67,6 +67,7 @@ const handleInput = (e) => {
   resultAreaEl.textContent = result;
   numberInputEl.value = "";
   resultContainerEl.classList.remove("hidden");
+  btnEl.blur();
 };
 
 btnEl.addEventListener("click", handleInput);
