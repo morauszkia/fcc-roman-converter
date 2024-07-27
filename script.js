@@ -54,8 +54,12 @@ const handleInput = (e) => {
 
   let result;
 
-  if (arabicNumber < 0 || arabicNumber > 3999) {
-    result = "Please enter a valid number between 0 and 3999";
+  if (!arabicNumber) {
+    result = "Please enter a valid number";
+  } else if (arabicNumber < 1) {
+    result = "Please enter a number greater than or equal to 1";
+  } else if (arabicNumber >= 4000) {
+    result = "Please enter a number less than or equal to 3999";
   } else {
     result = convert(arabicNumber);
   }
